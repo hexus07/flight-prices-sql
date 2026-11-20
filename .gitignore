@@ -1,8 +1,11 @@
-data/
+
 __pycache__/
 .ipynb_checkpoints/
 .venv/
 *.md
+*.parquet
+*.db
 !results/*.md
 !README.md
 !data/README.md
+.DS_Store
