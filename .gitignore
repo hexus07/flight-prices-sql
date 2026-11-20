@@ -4,3 +4,5 @@ __pycache__/
 .venv/
 *.md
 !results/*.md
+!README.md
+!data/README.md

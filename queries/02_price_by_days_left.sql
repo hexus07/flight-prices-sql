@@ -1,4 +1,4 @@
--- CTE: 1. days until departures, 2. buckets for dtp
+-- Median price by days left before departure.
 
 WITH price_with_dtp AS (
     SELECT 
@@ -17,7 +17,7 @@ bucketed AS (
         END AS bucket
     FROM price_with_dtp
 ) 
-SELECT bucket, ROUND(AVG(price), 2) AS avg_price
+SELECT bucket, ROUND(AVG(price), 2) AS avg_price, ROUND(MEDIAN(price), 2) AS median_price, COUNT(*) AS n
 FROM bucketed
-WHERE bucket IS NOT NULL
-GROUP BY bucket;
+GROUP BY bucket
+ORDER BY bucket;

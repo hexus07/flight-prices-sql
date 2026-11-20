@@ -1,4 +1,4 @@
--- Overview of the dataset size, collection period, and price distribution.
+-- Dataset overview: size, period, price range.
 
 SELECT 
     COUNT(*) as observations,

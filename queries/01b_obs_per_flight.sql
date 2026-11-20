@@ -1,5 +1,4 @@
---  CTE: number of observations per flight
---  median, average, and flights seen once.
+-- How many times each flight was observed.
 
 WITH obs_per_flight AS(
     SELECT itinerary_id, COUNT(*) as n
